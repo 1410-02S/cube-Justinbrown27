@@ -195,7 +195,7 @@ public void turnFace(int index, String direction){
 	}
 
 	switch(direction){
-		case "c":
+		case "c": //red
 		cube[eFace.currentFace][0] = copy[eFace.currentFace][2];
 		cube[eFace.currentFace][1] = copy[eFace.currentFace][5];
 		cube[eFace.currentFace][2] = copy[eFace.currentFace][8];
@@ -260,7 +260,7 @@ public void turnFace(int index, String direction){
 	}
 
 	switch(direction){
-		case "c1":
+		case "c1": //blue
 		cube[eFace.currentFace][0] = copy[eFace.currentFace][2];
 		cube[eFace.currentFace][1] = copy[eFace.currentFace][5];
 		cube[eFace.currentFace][2] = copy[eFace.currentFace][8];
@@ -271,24 +271,24 @@ public void turnFace(int index, String direction){
 		cube[eFace.currentFace][8] = copy[eFace.currentFace][6];
 
 		// edge 1 changed
-		cube[eFace.edge1[0]][eFace.edge1[1]] = copy[eFace.edge4[0]][eFace.edge4[1]];
-		cube[eFace.edge1[0]][eFace.edge1[2]] = copy[eFace.edge4[0]][eFace.edge4[2]];
-		cube[eFace.edge1[0]][eFace.edge1[3]] = copy[eFace.edge4[0]][eFace.edge4[3]];
+		cube[eFace.edge1[0]][eFace.edge1[1]] = copy[eFace.edge3[0]][eFace.edge3[1]];
+		cube[eFace.edge1[0]][eFace.edge1[2]] = copy[eFace.edge3[0]][eFace.edge3[2]];
+		cube[eFace.edge1[0]][eFace.edge1[3]] = copy[eFace.edge3[0]][eFace.edge3[3]];
 
 		// edge 2 changed
-		cube[eFace.edge2[0]][eFace.edge2[1]] = copy[eFace.edge3[0]][eFace.edge3[1]];
-		cube[eFace.edge2[0]][eFace.edge2[2]] = copy[eFace.edge3[0]][eFace.edge3[2]];
-		cube[eFace.edge2[0]][eFace.edge2[3]] = copy[eFace.edge3[0]][eFace.edge3[3]];
+		cube[eFace.edge2[0]][eFace.edge2[1]] = copy[eFace.edge4[0]][eFace.edge4[1]];
+		cube[eFace.edge2[0]][eFace.edge2[2]] = copy[eFace.edge4[0]][eFace.edge4[2]];
+		cube[eFace.edge2[0]][eFace.edge2[3]] = copy[eFace.edge4[0]][eFace.edge4[3]];
 
 		// edge 3 changed
-		cube[eFace.edge3[0]][eFace.edge3[1]] = copy[eFace.edge1[0]][eFace.edge1[1]];
-		cube[eFace.edge3[0]][eFace.edge3[2]] = copy[eFace.edge1[0]][eFace.edge1[2]];
-		cube[eFace.edge3[0]][eFace.edge3[3]] = copy[eFace.edge1[0]][eFace.edge1[3]];
+		cube[eFace.edge3[0]][eFace.edge3[1]] = copy[eFace.edge2[0]][eFace.edge2[1]];
+		cube[eFace.edge3[0]][eFace.edge3[2]] = copy[eFace.edge2[0]][eFace.edge2[2]];
+		cube[eFace.edge3[0]][eFace.edge3[3]] = copy[eFace.edge2[0]][eFace.edge2[3]];
 
 		// edge 4 changed
-		cube[eFace.edge4[0]][eFace.edge4[1]] = copy[eFace.edge2[0]][eFace.edge2[1]];
-		cube[eFace.edge4[0]][eFace.edge4[2]] = copy[eFace.edge2[0]][eFace.edge2[2]];
-		cube[eFace.edge4[0]][eFace.edge4[3]] = copy[eFace.edge2[0]][eFace.edge2[3]];
+		cube[eFace.edge4[0]][eFace.edge4[1]] = copy[eFace.edge1[0]][eFace.edge1[1]];
+		cube[eFace.edge4[0]][eFace.edge4[2]] = copy[eFace.edge1[0]][eFace.edge1[2]];
+		cube[eFace.edge4[0]][eFace.edge4[3]] = copy[eFace.edge1[0]][eFace.edge1[3]];
 
 		break;
 		case "cc1":
@@ -322,6 +322,135 @@ public void turnFace(int index, String direction){
 		cube[eFace.edge4[0]][eFace.edge4[3]] = copy[eFace.edge2[0]][eFace.edge2[3]];
 		break;
 
+	}
+
+	switch(direction){
+		case "c2": //orange
+		cube[eFace.currentFace][0] = copy[eFace.currentFace][2];
+		cube[eFace.currentFace][1] = copy[eFace.currentFace][5];
+		cube[eFace.currentFace][2] = copy[eFace.currentFace][8];
+		cube[eFace.currentFace][3] = copy[eFace.currentFace][1];
+		cube[eFace.currentFace][5] = copy[eFace.currentFace][7];
+		cube[eFace.currentFace][6] = copy[eFace.currentFace][0];
+		cube[eFace.currentFace][7] = copy[eFace.currentFace][3];
+		cube[eFace.currentFace][8] = copy[eFace.currentFace][6];
+
+		// edge 1 changed
+		cube[eFace.edge1[0]][eFace.edge1[1]] = copy[eFace.edge3[0]][eFace.edge3[1]];
+		cube[eFace.edge1[0]][eFace.edge1[2]] = copy[eFace.edge3[0]][eFace.edge3[2]];
+		cube[eFace.edge1[0]][eFace.edge1[3]] = copy[eFace.edge3[0]][eFace.edge3[3]];
+
+		// edge 2 changed
+		cube[eFace.edge2[0]][eFace.edge2[1]] = copy[eFace.edge4[0]][eFace.edge4[1]];
+		cube[eFace.edge2[0]][eFace.edge2[2]] = copy[eFace.edge4[0]][eFace.edge4[2]];
+		cube[eFace.edge2[0]][eFace.edge2[3]] = copy[eFace.edge4[0]][eFace.edge4[3]];
+
+		// edge 3 changed
+		cube[eFace.edge3[0]][eFace.edge3[1]] = copy[eFace.edge2[0]][eFace.edge2[1]];
+		cube[eFace.edge3[0]][eFace.edge3[2]] = copy[eFace.edge2[0]][eFace.edge2[2]];
+		cube[eFace.edge3[0]][eFace.edge3[3]] = copy[eFace.edge2[0]][eFace.edge2[3]];
+
+		// edge 4 changed
+		cube[eFace.edge4[0]][eFace.edge4[1]] = copy[eFace.edge1[0]][eFace.edge1[1]];
+		cube[eFace.edge4[0]][eFace.edge4[2]] = copy[eFace.edge1[0]][eFace.edge1[2]];
+		cube[eFace.edge4[0]][eFace.edge4[3]] = copy[eFace.edge1[0]][eFace.edge1[3]];
+
+		break;
+		case "cc2":
+		cube[eFace.currentFace][0] = copy[eFace.currentFace][6];
+		cube[eFace.currentFace][1] = copy[eFace.currentFace][3];
+		cube[eFace.currentFace][2] = copy[eFace.currentFace][0];
+		cube[eFace.currentFace][3] = copy[eFace.currentFace][7];
+		cube[eFace.currentFace][5] = copy[eFace.currentFace][1];
+		cube[eFace.currentFace][6] = copy[eFace.currentFace][8];
+		cube[eFace.currentFace][7] = copy[eFace.currentFace][5];
+		cube[eFace.currentFace][8] = copy[eFace.currentFace][2];
+
+		// edge 1 changed
+		cube[eFace.edge1[0]][eFace.edge1[1]] = copy[eFace.edge4[0]][eFace.edge4[1]];
+		cube[eFace.edge1[0]][eFace.edge1[2]] = copy[eFace.edge4[0]][eFace.edge4[2]];
+		cube[eFace.edge1[0]][eFace.edge1[3]] = copy[eFace.edge4[0]][eFace.edge4[3]];
+
+		// edge 2 changed
+		cube[eFace.edge2[0]][eFace.edge2[1]] = copy[eFace.edge3[0]][eFace.edge3[1]];
+		cube[eFace.edge2[0]][eFace.edge2[2]] = copy[eFace.edge3[0]][eFace.edge3[2]];
+		cube[eFace.edge2[0]][eFace.edge2[3]] = copy[eFace.edge3[0]][eFace.edge3[3]];
+
+		// edge 3 changed
+		cube[eFace.edge3[0]][eFace.edge3[1]] = copy[eFace.edge1[0]][eFace.edge1[1]];
+		cube[eFace.edge3[0]][eFace.edge3[2]] = copy[eFace.edge1[0]][eFace.edge1[2]];
+		cube[eFace.edge3[0]][eFace.edge3[3]] = copy[eFace.edge1[0]][eFace.edge1[3]];
+
+		// edge 4 changed
+		cube[eFace.edge4[0]][eFace.edge4[1]] = copy[eFace.edge2[0]][eFace.edge2[1]];
+		cube[eFace.edge4[0]][eFace.edge4[2]] = copy[eFace.edge2[0]][eFace.edge2[2]];
+		cube[eFace.edge4[0]][eFace.edge4[3]] = copy[eFace.edge2[0]][eFace.edge2[3]];
+		break;
+
+	}
+
+	switch(direction){
+		case "c3": //green
+		cube[eFace.currentFace][0] = copy[eFace.currentFace][2];
+		cube[eFace.currentFace][1] = copy[eFace.currentFace][5];
+		cube[eFace.currentFace][2] = copy[eFace.currentFace][8];
+		cube[eFace.currentFace][3] = copy[eFace.currentFace][1];
+		cube[eFace.currentFace][5] = copy[eFace.currentFace][7];
+		cube[eFace.currentFace][6] = copy[eFace.currentFace][0];
+		cube[eFace.currentFace][7] = copy[eFace.currentFace][3];
+		cube[eFace.currentFace][8] = copy[eFace.currentFace][6];
+
+		// edge 1 changed
+		cube[eFace.edge1[0]][eFace.edge1[1]] = copy[eFace.edge4[0]][eFace.edge4[1]];
+		cube[eFace.edge1[0]][eFace.edge1[2]] = copy[eFace.edge4[0]][eFace.edge4[2]];
+		cube[eFace.edge1[0]][eFace.edge1[3]] = copy[eFace.edge4[0]][eFace.edge4[3]];
+
+		// edge 2 changed
+		cube[eFace.edge2[0]][eFace.edge2[1]] = copy[eFace.edge3[0]][eFace.edge3[1]];
+		cube[eFace.edge2[0]][eFace.edge2[2]] = copy[eFace.edge3[0]][eFace.edge3[2]];
+		cube[eFace.edge2[0]][eFace.edge2[3]] = copy[eFace.edge3[0]][eFace.edge3[3]];
+
+		// edge 3 changed
+		cube[eFace.edge3[0]][eFace.edge3[1]] = copy[eFace.edge1[0]][eFace.edge1[1]];
+		cube[eFace.edge3[0]][eFace.edge3[2]] = copy[eFace.edge1[0]][eFace.edge1[2]];
+		cube[eFace.edge3[0]][eFace.edge3[3]] = copy[eFace.edge1[0]][eFace.edge1[3]];
+
+		// edge 4 changed
+		cube[eFace.edge4[0]][eFace.edge4[1]] = copy[eFace.edge2[0]][eFace.edge2[1]];
+		cube[eFace.edge4[0]][eFace.edge4[2]] = copy[eFace.edge2[0]][eFace.edge2[2]];
+		cube[eFace.edge4[0]][eFace.edge4[3]] = copy[eFace.edge2[0]][eFace.edge2[3]];
+
+		break;
+		case "cc3":
+		cube[eFace.currentFace][0] = copy[eFace.currentFace][6];
+		cube[eFace.currentFace][1] = copy[eFace.currentFace][3];
+		cube[eFace.currentFace][2] = copy[eFace.currentFace][0];
+		cube[eFace.currentFace][3] = copy[eFace.currentFace][7];
+		cube[eFace.currentFace][5] = copy[eFace.currentFace][1];
+		cube[eFace.currentFace][6] = copy[eFace.currentFace][8];
+		cube[eFace.currentFace][7] = copy[eFace.currentFace][5];
+		cube[eFace.currentFace][8] = copy[eFace.currentFace][2];
+
+		// edge 1 changed
+		cube[eFace.edge1[0]][eFace.edge1[1]] = copy[eFace.edge3[0]][eFace.edge3[1]];
+		cube[eFace.edge1[0]][eFace.edge1[2]] = copy[eFace.edge3[0]][eFace.edge3[2]];
+		cube[eFace.edge1[0]][eFace.edge1[3]] = copy[eFace.edge3[0]][eFace.edge3[3]];
+
+		// edge 2 changed
+		cube[eFace.edge2[0]][eFace.edge2[1]] = copy[eFace.edge4[0]][eFace.edge4[1]];
+		cube[eFace.edge2[0]][eFace.edge2[2]] = copy[eFace.edge4[0]][eFace.edge4[2]];
+		cube[eFace.edge2[0]][eFace.edge2[3]] = copy[eFace.edge4[0]][eFace.edge4[3]];
+
+		// edge 3 changed
+		cube[eFace.edge3[0]][eFace.edge3[1]] = copy[eFace.edge2[0]][eFace.edge2[1]];
+		cube[eFace.edge3[0]][eFace.edge3[2]] = copy[eFace.edge2[0]][eFace.edge2[2]];
+		cube[eFace.edge3[0]][eFace.edge3[3]] = copy[eFace.edge2[0]][eFace.edge2[3]];
+
+		// edge 4 changed
+		cube[eFace.edge4[0]][eFace.edge4[1]] = copy[eFace.edge1[0]][eFace.edge1[1]];
+		cube[eFace.edge4[0]][eFace.edge4[2]] = copy[eFace.edge1[0]][eFace.edge1[2]];
+		cube[eFace.edge4[0]][eFace.edge4[3]] = copy[eFace.edge1[0]][eFace.edge1[3]];
+		break;
 	}
 
 }
@@ -383,12 +512,16 @@ throws IOException
 			RubiksCube.showCube();
 			break;
 			case "l":
+			RubiksCube.turnFace(2, "c2");
+			RubiksCube.showCube();
 			break;
 			case "f":
 			RubiksCube.turnFace(1, "c1");
 			RubiksCube.showCube();
 			break;
 			case "b":
+			RubiksCube.turnFace(3, "c3");
+			RubiksCube.showCube();
 			break;
 			case "u'":
 			break;
@@ -399,12 +532,16 @@ throws IOException
 			RubiksCube.showCube();
 			break;
 			case "l'":
+			RubiksCube.turnFace(2, "cc2");
+			RubiksCube.showCube();
 			break;
 			case "f'":
 			RubiksCube.turnFace(1, "cc1");
 			RubiksCube.showCube();
 			break;
 			case "b'":
+			RubiksCube.turnFace(3, "cc3");
+			RubiksCube.showCube();
 			break;
 			case "s":
 			break;
